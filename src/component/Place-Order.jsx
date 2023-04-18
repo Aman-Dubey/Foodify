@@ -8,9 +8,9 @@ export default function PlaceOrder() {
   return (
     <div className="mb-28">
       <Header />
-      <Divider />
+      <Divider msg="Current Order" />
       <OrderCardBox />
-      <Divider />
+      <Divider msg="Previous Orders" />
       <OrderCardBox />
       <PlaceOrderFooter />
     </div>

@@ -10,7 +10,7 @@ export default function HomeSpecial() {
     <div className="mb-20">
       <AppTopBar />
       <Rectangle />
-      <Divider />
+      <Divider msg="Today's Special" />
       <div className="flex justify-center items-center p-4">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
           <FoodCard />

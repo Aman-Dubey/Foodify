@@ -8,7 +8,7 @@ export default function HomeMenu() {
   return (
     <div className="mb-20">
       <AppTopBar />
-      <Divider />
+      <Divider msg="Acai bowls" />
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <ShortCard />
         <ShortCard />
@@ -20,7 +20,7 @@ export default function HomeMenu() {
         <ShortCard />
       </div>
 
-      <Divider />
+      <Divider msg="Acai bowls" />
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <ShortCard />
         <ShortCard />
