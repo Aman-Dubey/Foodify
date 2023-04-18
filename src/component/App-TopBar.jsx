@@ -13,11 +13,11 @@ export default function AppTopBar() {
           <div className="font-bold">Sacred Earth Cafe</div>
         </div>
         <div className="flex flex-row justify-between items-center space-x-4">
-          <Button icon="cont.png" size_w="11" size_s="8" />
-          <Button icon="has.png" size_w="11" size_s="8" />
+          <Button icon="cont.png" size_w="10" size_s="8" />
+          <Button icon="has.png" size_w="10" size_s="8" />
         </div>
       </div>
-      <div className="flex flex-row justify-between rounded-b-2xl border-l-red-400 border-b-2 shadow-lg px-3 py-1 items-center mx-4 sm:mx-2">
+      <div className="flex flex-row justify-between rounded-b-2xl border-b-2 shadow-lg px-3 py-1 items-center mx-4 sm:mx-2">
         <Menu value="Special" color="#3CBCB4" visible="visible" />
         <Menu value="Main" color="#4A5662" visible="invisible" />
         <Menu value="Deserts" color="#4A5662" visible="invisible" />

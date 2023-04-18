@@ -6,7 +6,7 @@ import ShortCard from "./ShortCard";
 
 export default function HomeMenu() {
   return (
-    <div className="bg-[#F0F3F3] mb-20">
+    <div className="mb-20">
       <AppTopBar />
       <Divider />
       <div className="grid grid-cols-1 lg:grid-cols-2">

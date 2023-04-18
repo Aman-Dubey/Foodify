@@ -7,7 +7,7 @@ import AppTopBar from "./App-TopBar";
 
 export default function HomeSpecial() {
   return (
-    <div>
+    <div className="mb-20">
       <AppTopBar />
       <Rectangle />
       <Divider />
