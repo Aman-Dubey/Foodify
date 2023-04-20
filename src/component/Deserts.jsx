@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Divider from "./Divider";
 import FoodCard from "./FoodCard";
 import Footer from "./Footer";
-import Rectangle from "./Rectangle";
 import AppTopBar from "./App-TopBar";
 import { data } from "../data/data";
 
@@ -12,7 +11,7 @@ export default function HomeSpecial() {
   useEffect(() => {
     const filteredData = [];
     data.map((val) => {
-      if (val.category === "special") {
+      if (val.category === "dessert") {
         filteredData.push(val);
       }
     });
@@ -22,8 +21,7 @@ export default function HomeSpecial() {
   return (
     <div className="mb-20">
       <AppTopBar />
-      <Rectangle />
-      <Divider msg="Today's Special" />
+      <Divider msg="Our Speciallity" />
       <div className="flex justify-center items-center p-4">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
           {foodData.length &&

@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "./Button";
 
 export default function PlaceOrderFooter() {
   return (
@@ -10,7 +9,7 @@ export default function PlaceOrderFooter() {
           <div className="flex justify-center items-center space-x-2 px-3 md:px-12 ">
             <div className="text-white font-semibold">Place Order</div>
             <div className="flex justify-center items-center p-1 bg-[#108ca5] rounded-full">
-              <img src="assets/right.png" className="w-6" />
+              <img src="assets/right.png" className="w-6" alt="right" />
             </div>
           </div>
         </div>
