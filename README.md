@@ -40,7 +40,7 @@ The Application Runs on PORT(it will be dispayed in terminal)
 
 ### Desktop version
 
-![1](./assets/Screenshots/1.png)
+![1](./public/assets/Screenshots/1.png)
 ![2](./assets/Screenshots/2.png)
 ![3](./assets/Screenshots/3.png)
 ![4](./assets/Screenshots/4.png)
