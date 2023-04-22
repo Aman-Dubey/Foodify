@@ -40,4 +40,18 @@ The Application Runs on PORT(it will be dispayed in terminal)
 
 ### Desktop version
 
-![1](assets/Screenshots/1)
+![1](./assets/Screenshots/1.png)
+![2](./assets/Screenshots/2.png)
+![3](./assets/Screenshots/3.png)
+![4](./assets/Screenshots/4.png)
+![5](./assets/Screenshots/5.png)
+![6](./assets/Screenshots/6.png)
+![7](./assets/Screenshots/7.png)
+
+### Mobile version
+
+![1](./assets/Screenshots/M1.png)
+![2](./assets/Screenshots/M2.png)
+![3](./assets/Screenshots/M3.png)
+![4](./assets/Screenshots/M4.png)
+![5](./assets/Screenshots/M5.png)
