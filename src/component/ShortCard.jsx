@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import AddButton from "./AddButton";
+import { CartContext } from "../contexts/cartContext";
+import AddSubButton from "./AddSubButton";
 
-export default function ShortCard({ image, name, tag, price }) {
+export default function ShortCard({ item }) {
+  const { image, name, tag, price, id } = item;
+  const { addItemToCart, removeItemFromCart, cartItems } =
+    useContext(CartContext);
+
+  const [count, setCount] = useState(0);
+
+  const addButtonClickHandler = () => {
+    addItemToCart(item);
+  };
+
+  const removeButtonClickHandler = () => {
+    removeItemFromCart(item);
+  };
+
+  useEffect(() => {
+    let itemCount = cartItems.reduce(
+      (total, cartItem) =>
+        cartItem.id === id ? total + cartItem.quantity : total + 0,
+      0
+    );
+    setCount(itemCount);
+  }, [cartItems, id]);
+
   return (
     <div>
       <div className="max-w-[400px] mx-auto m-2 rounded-xl overflow-hidden shadow-gray-400 shadow-lg">
@@ -25,7 +50,15 @@ export default function ShortCard({ image, name, tag, price }) {
                 </div>
                 <p className="px-1">&#8377;{price}</p>
               </div>
-              <AddButton />
+              {count ? (
+                <AddSubButton
+                  quantity={count}
+                  increase={addButtonClickHandler}
+                  decrease={removeButtonClickHandler}
+                />
+              ) : (
+                <AddButton click={addButtonClickHandler} />
+              )}
             </div>
           </div>
         </div>

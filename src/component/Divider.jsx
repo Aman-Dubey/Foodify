@@ -7,7 +7,7 @@ export default function Divider({ msg }) {
         <div className="ml-6 w-56">{msg}</div>
         <div className="border-b-2 border-[#4A5662] w-full" />
         <div className="ml-4 mr-6">
-          <img src="assets/up.png" className="w-6" alt="" srcset="" />
+          <img src="assets/up.png" className="w-6" alt="" />
         </div>
       </div>
     </div>

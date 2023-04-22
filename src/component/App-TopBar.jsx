@@ -1,32 +1,46 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Button from "./Button";
 import Menu from "./Menu";
-
+import { useNavigate } from "react-router-dom";
+import { TabContext } from "../contexts/tabContext";
 export default function AppTopBar() {
-  const [selectedTab, setSelectedTab] = useState(2);
+  const { currentTab, updateCurrentTab } = useContext(TabContext);
+  const [selectedTab, setSelectedTab] = useState(0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setSelectedTab(currentTab);
+  }, [currentTab]);
 
   const tabMenuClickHandler = (e) => {
-    console.log(e.target.innerText);
     switch (e.target.innerText) {
       case "Special":
         setSelectedTab(0);
+        updateCurrentTab(0);
+        navigate("/");
         break;
       case "Main":
         setSelectedTab(1);
+        updateCurrentTab(1);
+        navigate("/home-menu");
         break;
       case "Desserts":
         setSelectedTab(2);
+        updateCurrentTab(2);
+        navigate("/deserts");
         break;
       case "Beverages":
         setSelectedTab(3);
+        updateCurrentTab(3);
+        navigate("/beverages");
         break;
       default:
         setSelectedTab(0);
+        updateCurrentTab(0);
+        navigate("/");
         break;
     }
   };
-
-  console.log(selectedTab);
 
   return (
     <div className="flex flex-col max-w-6xl mx-auto space-y-10 pt-4 px-2 md:px-4">
@@ -45,30 +59,25 @@ export default function AppTopBar() {
       <div className="flex flex-row justify-around rounded-b-2xl border-b-2 shadow-lg px-3 py-1 items-center mx-4 sm:mx-2">
         <Menu
           value="Special"
-          color="red"
           visible={selectedTab === 0}
-          link="/"
           click={tabMenuClickHandler}
         />
+
         <Menu
           value="Main"
-          color="#2BE6AA"
           visible={selectedTab === 1}
-          link="/home-menu"
           click={tabMenuClickHandler}
         />
+
         <Menu
           value="Desserts"
-          color="#2BE6AA"
           visible={selectedTab === 2}
-          link="/deserts"
           click={tabMenuClickHandler}
         />
+
         <Menu
           value="Beverages"
-          color="#2BE6AA"
           visible={selectedTab === 3}
-          link="/beverages"
           click={tabMenuClickHandler}
         />
       </div>

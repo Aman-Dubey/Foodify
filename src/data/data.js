@@ -228,7 +228,7 @@ export const data = [
     type: "hot",
   },
   {
-    id: 27,
+    id: 28,
     name: "Beer",
     category: "beverage",
     tag: "non-veg",

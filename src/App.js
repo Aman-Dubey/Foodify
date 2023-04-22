@@ -10,7 +10,7 @@ function App() {
     <div className="w-full mx-auto">
       <Router>
         <Routes>
-          <Route exact path="/" element={<HomeSpecial />} />
+          <Route exact index path="/" element={<HomeSpecial />} />
           <Route exact path="/home-menu" element={<HomeMenu />} />
           <Route exact path="/place-order" element={<PlaceOrder />} />
           <Route exact path="/deserts" element={<Deserts />} />
